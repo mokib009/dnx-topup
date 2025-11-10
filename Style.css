@@ -1,0 +1,22 @@
+body {
+  font-family: sans-serif;
+  background: linear-gradient(135deg,#4a148c,#7b1fa2);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+input, button {
+  margin: 8px;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+}
+button {
+  background: #fff;
+  color: #4a148c;
+  font-weight: bold;
+}
+button:hover {
+  background: #f3e5f5;
+}
