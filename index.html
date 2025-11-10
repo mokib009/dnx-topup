@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DNX Topup Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>💎 DNX Topup Store</h1>
+  <p>Free Fire Diamonds via UPI – Fast • Safe • Trusted</p>
+
+  <label>Enter Free Fire UID:</label><br>
+  <input id="uidInput" type="number" placeholder="Enter UID">
+  <button onclick="lookup()">Check Name</button>
+  <p id="result"></p>
+
+  <h3>Diamond Packs</h3>
+  <button onclick="buy('100 Diamonds','₹50')">100 Diamonds – ₹50</button>
+  <button onclick="buy('310 Diamonds','₹140')">310 Diamonds – ₹140</button>
+  <button onclick="buy('560 Diamonds','₹250')">560 Diamonds – ₹250</button>
+
+  <div id="payment" hidden>
+    <h3>Payment Instructions</h3>
+    <p>Pay to UPI <strong>Q009237318@ybl</strong></p>
+    <p>After payment, send screenshot to Telegram bot.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
