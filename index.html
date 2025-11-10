@@ -1,30 +1,44 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>DNX Topup Store</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
-  <h1>💎 DNX Topup Store</h1>
-  <p>Free Fire Diamonds via UPI – Fast • Safe • Trusted</p>
+  <header>
+    <h1>💜 DNX Topup Store</h1>
+    <p>Free Fire Diamonds • Fast • Safe</p>
+  </header>
 
-  <label>Enter Free Fire UID:</label><br>
-  <input id="uidInput" type="number" placeholder="Enter UID">
-  <button onclick="lookup()">Check Name</button>
-  <p id="result"></p>
+  <main>
+    <section id="uidBox">
+      <label for="uid">Enter Free Fire UID</label><br/>
+      <input id="uid" inputmode="numeric" placeholder="Example: 123456789" />
+      <button id="checkBtn">Check IGN</button>
+      <p id="ignOutput"></p>
+    </section>
 
-  <h3>Diamond Packs</h3>
-  <button onclick="buy('100 Diamonds','₹50')">100 Diamonds – ₹50</button>
-  <button onclick="buy('310 Diamonds','₹140')">310 Diamonds – ₹140</button>
-  <button onclick="buy('560 Diamonds','₹250')">560 Diamonds – ₹250</button>
+    <section id="packs">
+      <h2>Choose a Pack</h2>
+      <div class="pack" onclick="buy('100 Diamonds','₹50')">100 Diamonds — ₹50</div>
+      <div class="pack" onclick="buy('310 Diamonds','₹140')">310 Diamonds — ₹140</div>
+      <div class="pack" onclick="buy('560 Diamonds','₹250')">560 Diamonds — ₹250</div>
+    </section>
 
-  <div id="payment" hidden>
-    <h3>Payment Instructions</h3>
-    <p>Pay to UPI <strong>Q009237318@ybl</strong></p>
-    <p>After payment, send screenshot to Telegram bot.</p>
-  </div>
+    <section id="payment" hidden>
+      <h2>Payment Instructions</h2>
+      <p>Send the requested amount to UPI ID: <strong id="upi">Q009237318@ybl</strong></p>
+      <p>After payment, take screenshot and send it to our Telegram Bot to confirm.</p>
+      <button id="doneBtn">I paid — Send order</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© DNX Topup Store</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
